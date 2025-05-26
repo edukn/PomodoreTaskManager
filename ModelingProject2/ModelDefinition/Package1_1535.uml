@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="01fc57da-ff20-456f-89e1-3bd5c6929937"
+  name="Apis"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="bba3b6a2-53c2-453e-926f-f16e32c8a43b"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DGoogle.Apis"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="1a60ab22-8d37-427d-83fb-344351045d70"
+        LastKnownName="Sample"
+        LastKnownLocation="Package2_1535.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="58b3c57d-b652-4764-9b9a-23047665046f"
+        LastKnownName="Auth"
+        LastKnownLocation="Package5_1535.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

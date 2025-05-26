@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="0193a5c6-265d-4cc2-8390-6c3a6d531b16"
+  name="Controllers"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="58e2074e-0b2f-4bbe-b092-88804932b69a"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DGoogle.Apis.Auth.OAuth2.Mvc.Controllers"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="08d694b1-5c6e-4144-bbde-d93a1e307255"
+        name="AuthCallbackController"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="9fa2a335-05c5-4157-8dff-53e8cb4ec9c4"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FEduardoKNeto%2FDocuments%2FVisual Studio 2013%2FProjects%2FTaskManagerV2%2Fpackages%2FGoogle.Apis.Auth.Mvc.1.8.1%2Flib%2Fnet40%2FGoogle.Apis.Auth.Mvc4.dll&quot; Namespace%3DGoogle.Apis.Auth.OAuth2.Mvc.Controllers Type%3DAuthCallbackController"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="8a7fae99-970c-4794-a925-b555b9718a49"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="82d35d03-ee51-48bf-8d37-0875ae8d909f">
+                <propertyInstance
+                  Id="a16a0a77-6399-427d-a23a-470e08352a19"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="0e9ebf16-f706-4714-a2c7-d28e6f7e1737">
+                <propertyInstance
+                  Id="54d644c5-1275-4cc6-a55f-18fee89b8286"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="d8605d58-a287-44f7-be73-d30402ffad1d">
+                <propertyInstance
+                  Id="8bb5f8c9-12b8-43f0-9364-1a80e82c8a7b"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="a79b8d1a-0def-4197-9c24-1c9bfced7101">
+                <propertyInstance
+                  Id="8c59259c-60f9-4655-bb51-0d0ae1151e7c"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ba27cf23-eb88-4078-a01e-e0497bae62ea">
+                <propertyInstance
+                  Id="8a26b16a-fc79-40ac-aac2-f10fe81709c2"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

@@ -1,0 +1,70 @@
+﻿@model IEnumerable<TaskManagerV2.Models.Tarefa>
+@using Microsoft.AspNet.Identity;
+
+@{
+    ViewBag.Title = "Tarefas";
+}
+
+<h2>Suas Tarefas</h2>
+
+<p>
+    @Html.ActionLink("Criar Nova Tarefa", "Create") |
+    @Html.ActionLink("Importar Tarefas", "ChooseCalendar") |
+    @Html.ActionLink("Gráficos de Produtividade", "Graphics")
+    @ViewBag.texto
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TituloTarefa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataInicio)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataFinal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PomodorosPlanejados)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PomodorosEfetivos)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TituloTarefa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataInicio)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataFinal)
+        </td>
+        <td align="center">
+            @Html.DisplayFor(modelItem => item.PomodorosPlanejados)
+        </td>
+        <td align="center">
+            @Html.DisplayFor(modelItem => item.PomodorosEfetivos)
+        </td>
+        <td align="center">
+            Nao Concluida
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.id }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.id }) |
+            @Html.ActionLink("Exportar", "ExportTasks", new { id = item.id })|
+            @Html.ActionLink("Iniciar Tarefa", "Realizar", new { id = item.id })
+        </td>
+    </tr>
+    
+}
+
+</table>

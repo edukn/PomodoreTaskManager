@@ -1,0 +1,14 @@
+﻿@{
+    Layout = null;
+    var mychart = new Chart(width: 300, height: 300)
+      .AddTitle("Employee Chart")
+      .AddSeries(
+          chartType: "Bubble",
+          name: "Employee",
+          xValue: new[] { "Peter", "Andrew", "Julie", "Dave" },
+          yValues: new[] { "2", "7", "5", "3" });
+          mychart.Save("~/TempImages", "jpeg");
+          
+
+}
+

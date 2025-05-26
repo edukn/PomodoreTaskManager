@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="03c5b70b-a5c6-4023-a31b-81ebb69c19f6"
+  name="Security"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="7cf42438-cc69-4558-a9ae-a24696a29d10"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DMicrosoft.Owin.Security"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <Interface
+        Id="7bd8026d-3e38-4253-b68f-091dd2c76ef2"
+        name="IAuthenticationManager"
+        isAbstract="false"
+        isLeaf="false">
+        <referencesInternal>
+          <reference
+            Id="cc9e660c-cbbd-4d41-be48-36ce275bb66b"
+            handle="viewcode://./CodeSchema_Interface?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FEduardoKNeto%2FDocuments%2FVisual Studio 2013%2FProjects%2FTaskManagerV2%2Fpackages%2FMicrosoft.Owin.2.0.0%2Flib%2Fnet45%2FMicrosoft.Owin.dll&quot; Namespace%3DMicrosoft.Owin.Security Type%3DIAuthenticationManager"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="c79dac78-4c6a-42b3-a4e8-236406e2366b"
+            name="interface"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="7bf77beb-a4c9-426d-9fbd-0abffcf37357">
+                <propertyInstance
+                  Id="904b2788-de1f-4ecc-b86f-b7589d664112"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="9bb43b28-b40c-42f5-810a-8d571886aed7">
+                <propertyInstance
+                  Id="c7b82234-d494-4aad-97e7-7fe17e168642"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="2eb8e1d0-a2ac-44a9-8471-1d9880fdc278">
+                <propertyInstance
+                  Id="729013e4-3fc7-42d4-8110-61f83e79f149"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4d41422e-7c4e-4ebd-bb0b-41cc20886934">
+                <propertyInstance
+                  Id="24d01162-d418-4b60-9284-42a11dbbd37e"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </Interface>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

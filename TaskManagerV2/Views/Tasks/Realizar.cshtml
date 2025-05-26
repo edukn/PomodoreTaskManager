@@ -1,0 +1,94 @@
+﻿@model TaskManagerV2.Models.Tarefa
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Realizar Tarefa";
+}
+<h2>Iniciar esta Tarefa:</h2>
+   <h3> @Html.DisplayFor(model => model.TituloTarefa) </h3>
+<script type="text/javascript" language="javascript" src="Scripts/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+    var url = '@Url.Action("Realizar/4", "Tasks")';
+    var contador = 5; var minutos = 0; var timer;
+    function conta() {
+        desabilita();
+        if (contador >= 10)
+            document.getElementById('teste').innerHTML = "<h1>"+ minutos + ":" + contador +"</h1>";
+        else if(contador < 10)
+            document.getElementById('teste').innerHTML = "<h1>" + minutos + ":0" + contador + "</h1>";
+        if (contador == 0 && minutos != 0) {
+            contador = 60
+        }
+        if (contador == 60 && minutos != 0) {
+            minutos = minutos - 1;
+        }
+        if (contador != 0) {
+            contador = contador - 1;
+            timer = setTimeout("conta()", 1000);
+        } if (minutos == 0 && contador == 0) {
+            abilita1();
+            return;
+        }
+    }
+   
+    function desabilita() {
+        document.getElementById('Button1').disabled = true;
+    }
+
+    function desabilita2() {
+        document.getElementById('confirm').disabled = true;
+    }
+
+    function abilita1() {
+        document.getElementById('confirm').disabled = false;
+    }
+
+    function abilita2() {
+        document.getElementById('Button1').disabled = false;
+        document.getElementById('confirm').disabled = true;
+    }
+
+    function pausar()
+    {
+        clearTimeout(timer);
+        document.getElementById('Button1').disabled = false;
+    }
+
+    function cancelar() {
+        clearTimeout(timer);
+        contador = 20;
+        minutos = 0;
+        document.getElementById('Button1').disabled = false;
+    }
+
+    function teste()
+    {
+        document.getElementById('tr').disabled = false;
+    }
+
+</script>
+<div id="d" style='position:relative; top:0px; left:0px;'>
+    <img src="~/Images/pomodoro.jpg" width="500" height="250" />
+<div id="teste" style='position:absolute; color:white; top:150px; left:200px;'>
+    <h1>25:00</h1>
+</div>
+    </div>
+    <input id="Button1" type="button" value="Iniciar Pomodoro" onclick="conta()" class="btn btn-default" /> <br />
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-actions no-color">
+            <br />
+            <input type="submit" id="confirm" name="action" value="Confirmar Pomodoro" disabled onblur="abilita2()" class="btn btn-success" /> |
+            <input id="tr" type="submit" name="actionn" value="Terminar Tarefa" class="btn btn-success" /> |
+            <input type="button" id="pause" value="Pausar Pomodoro" onclick="pausar()" class="btn btn-default" /> |
+            <input type="button" id="cancel" value="Cancelar Pomodoro" onclick="cancelar()" class="btn btn-danger" /> |
+            @Html.ActionLink("Voltar a lista de tarefas", "Index") <br /> <br />
+            @ViewBag.Message
+            @ViewBag.Message2
+            @ViewBag.M
+        </div>
+    }

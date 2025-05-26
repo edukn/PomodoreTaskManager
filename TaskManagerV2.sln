@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagerV2", "TaskManagerV2\TaskManagerV2.csproj", "{6FA47068-2E74-451D-A015-2467411F00A1}"
+EndProject
+Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject2", "ModelingProject2\ModelingProject2.modelproj", "{55A7710F-7F45-4F7E-9C28-430E818D1EB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6FA47068-2E74-451D-A015-2467411F00A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FA47068-2E74-451D-A015-2467411F00A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FA47068-2E74-451D-A015-2467411F00A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FA47068-2E74-451D-A015-2467411F00A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55A7710F-7F45-4F7E-9C28-430E818D1EB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55A7710F-7F45-4F7E-9C28-430E818D1EB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55A7710F-7F45-4F7E-9C28-430E818D1EB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55A7710F-7F45-4F7E-9C28-430E818D1EB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

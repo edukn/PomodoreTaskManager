@@ -1,0 +1,45 @@
+﻿@model IEnumerable<TaskManagerV2.ClassLibrary.CalendarType>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+    ViewBag.Title = "Exportar/Importar Google Agenda";
+}
+<h2>Escolha uma de suas Agendas do Google</h2>
+<table class="table">
+    <tr>
+        <th>
+            Titulo
+        </th>
+        <th>
+            Descrição
+        </th>
+        <th>
+            Local
+        </th>
+    </tr>
+    @foreach(var file in Model)
+    { 
+        
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => file.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => file.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => file.Location)
+            </td>
+            <td>
+              @{ string t = file.Id;
+                 //int pos = id.IndexOf('@');
+                 //string t = id.Substring(0, pos);
+                 }
+                <a href='@Url.Action("ImportTasks", new { t })'>Escolher</a>
+            </td>
+        </tr>
+    }
+</table>

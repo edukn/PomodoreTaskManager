@@ -1,0 +1,88 @@
+﻿@model TaskManagerV2.Models.Tarefa
+
+@{
+    ViewBag.Title = "Excluir";
+}
+
+<h2>Excluir</h2>
+
+<h3>Você realmente quer excluir esta Tarefa?</h3>
+<div>
+    <h4>Tarefa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TituloTarefa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TituloTarefa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescricaoTarefa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescricaoTarefa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataInicio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataInicio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataFinal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataFinal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Local)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Local)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PomodorosPlanejados)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PomodorosPlanejados)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PomodorosEfetivos)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PomodorosEfetivos)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Excluir" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar a lista de tarefas", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,84 @@
+﻿@model TaskManagerV2.Models.Tarefa
+
+@{
+    ViewBag.Title = "Editar";
+}
+
+<h2>Editar Tarefa</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>Tarefa</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.TituloTarefa, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TituloTarefa)
+                @Html.ValidationMessageFor(model => model.TituloTarefa)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DescricaoTarefa, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.DescricaoTarefa)
+                @Html.ValidationMessageFor(model => model.DescricaoTarefa)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DataInicio, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.DataInicio, new { type = "date" })
+                @Html.ValidationMessageFor(model => model.DataInicio)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.DataFinal, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.DataFinal, new { type = "date" })
+                @Html.ValidationMessageFor(model => model.DataFinal)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Local, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Local)
+                @Html.ValidationMessageFor(model => model.Local)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PomodorosPlanejados, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PomodorosPlanejados)
+                @Html.ValidationMessageFor(model => model.PomodorosPlanejados)
+            </div>
+        </div>
+
+        
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Salvar" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Voltar a lista de tarefas", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

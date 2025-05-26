@@ -1,0 +1,31 @@
+﻿@using Microsoft.Owin.Security
+
+<h4>Use outro serviço para fazer login</h4>
+<hr />
+@{
+    var loginProviders = Context.GetOwinContext().Authentication.GetExternalAuthenticationTypes();
+    if (loginProviders.Count() == 0)
+    {
+        <div>
+            <p>Não ha nenhum login externo disponivel. Leia <a href="http://go.microsoft.com/fwlink/?LinkId=313242">este artigo</a>
+            para mais detalhes sobre como utilizar login externo com ASP.NET</p>
+        </div>
+    }
+    else
+    {
+        string action = Model.Action;
+        string returnUrl = Model.ReturnUrl;
+        using (Html.BeginForm(action, "Account", new { ReturnUrl = returnUrl }))
+        {
+            @Html.AntiForgeryToken()
+            <div id="socialLoginList">
+                <p>
+                @foreach (AuthenticationDescription p in loginProviders)
+                {
+                    <button type="submit" class="zocial @p.AuthenticationType.ToLower()" id="@p.AuthenticationType" name="provider" value="@p.AuthenticationType" title="Login usando sua conta do @p.Caption">@p.AuthenticationType</button>
+                }
+                </p>
+            </div>
+        }
+    }
+}

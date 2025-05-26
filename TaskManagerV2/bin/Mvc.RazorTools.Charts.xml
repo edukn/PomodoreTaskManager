@@ -1,0 +1,591 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Mvc.RazorTools.Charts</name>
+    </assembly>
+    <members>
+        <member name="T:Mvc.RazorTools.Charts.Morris.PrependFormatter">
+            <summary>
+            A formatter for perpending data to a string.
+            </summary>
+        </member>
+        <member name="T:Mvc.RazorTools.Charts.Morris.CallbackFormatter">
+            <summary>
+            A formatter for used for JavaScript callbacks.
+            </summary>
+        </member>
+        <member name="T:Mvc.RazorTools.Charts.Morris.IFormatCallback">
+            <summary>
+            Interface specification for a callback formatter used by the
+            JavaScript library for formatting display values.
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.IFormatCallback.FormatString">
+            <summary>
+            Gets/sets the string used for formatting the display.
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.IFormatCallback.Type">
+            <summary>
+            Gets the unique string name representing the type
+            of formatter.
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.IFormatCallback.AttributeValue">
+            <summary>
+            Gets the attribute value written in the HTML tag for
+            this formatter.
+            </summary>
+        </member>
+        <member name="M:Mvc.RazorTools.Charts.Morris.CallbackFormatter.#ctor(System.String)">
+            <summary>
+            Creates an instance of CallbackFormatter with
+            the specified type.
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.CallbackFormatter.Type">
+            <summary>
+            Gets the Type name that this formatter represents.
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.CallbackFormatter.FormatString">
+            <summary>
+            Gets/sets the format string for this formatter.
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.CallbackFormatter.AttributeValue">
+            <summary>
+            Gets the attribute value written tot he TML tag for this formatter.
+            </summary>
+        </member>
+        <member name="M:Mvc.RazorTools.Charts.Morris.PrependFormatter.#ctor(System.String)">
+            <summary>
+            Creates an instance of a Mvc.RazorTools.Charts.Morris.PrependFormatter
+            with the specified format string.
+            </summary>
+            <param name="formatString">A string that represents the text to be added before the display value.</param>
+        </member>
+        <member name="T:Mvc.RazorTools.Charts.Morris.AppendFormatter">
+            <summary>
+            A formatter for appending data to a string.
+            </summary>
+        </member>
+        <member name="M:Mvc.RazorTools.Charts.Morris.AppendFormatter.#ctor(System.String)">
+            <summary>
+            Creates an instance of a Mvc.RazorTools.Charts.Morris.AppendFormatter
+            with the specified format string.
+            </summary>
+            <param name="formatString">A string that represents the text to be added after the display value.</param>
+        </member>
+        <member name="T:Mvc.RazorTools.Charts.Morris.DateFormatter">
+            <summary>
+            This formatter uses moment.js to format dates and times. use
+            the moment.js syntax in the FormatString.
+            </summary>
+        </member>
+        <member name="M:Mvc.RazorTools.Charts.Morris.DateFormatter.#ctor(System.String)">
+            <summary>
+            Creates an instance of a Mvc.RazorTools.Charts.Morris.DateFormatter
+            with the specified format string.
+            </summary>
+            <param name="formatString">A format string representing how the date/time should be displayed. This formatters
+            uses Moment.js for formatting date time values.</param>
+        </member>
+        <member name="T:Mvc.RazorTools.Charts.Morris.RazorAreaChart">
+            <summary>
+            Creates Morris Area charts. Area charts take all the same options as line charts but are shaded
+            under the lines.
+            </summary>
+        </member>
+        <member name="T:Mvc.RazorTools.Charts.Morris.RazorLineChart">
+            <summary>
+            Creates Morris Line charts.
+            </summary>
+        </member>
+        <member name="T:Mvc.RazorTools.Charts.Morris.RazorSeriesChart">
+            <summary>
+            This is the base class for the Morris series based charts (line, area and bar).
+            </summary>
+        </member>
+        <member name="T:Mvc.RazorTools.Charts.Morris.RazorChart">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Mvc.RazorTools.Charts.Morris.RazorChart.#ctor(System.String,Mvc.RazorTools.Charts.Morris.RazorChartType)">
+            <summary>
+            Creates a new instance of a razor chart of the given type with the specified
+            ID.
+            </summary>
+            <param name="id">The Unique ID of this chart.</param>
+            <param name="chartType">The type of chart to create.</param>
+        </member>
+        <member name="M:Mvc.RazorTools.Charts.Morris.RazorChart.SetAttribute(System.String,System.Object)">
+            <summary>
+            Sets or removes the attribute and value.
+            </summary>
+            <param name="name">The name of the attribute.</param>
+            <param name="value">The value of the attribute. A null value will remove the attribute.</param>
+        </member>
+        <member name="M:Mvc.RazorTools.Charts.Morris.RazorChart.SetStyle(System.String,System.String)">
+            <summary>
+            Sets or removes the style and value.
+            </summary>
+            <param name="name">The name of the style.</param>
+            <param name="value">The value of the style. A null value will remove the style.</param>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorChart.Type">
+            <summary>
+            Gets the type of chart this instance represents.
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorChart.DataUrl">
+            <summary>
+            The URL to the data to plot. This is an array of objects, containing x and y attributes 
+            as described by the XKey and YKeys options. Note: ordering doesn't matter here - you  
+            can supply the data in whatever order works best for you.
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorChart.ChartHeight">
+            <summary>
+            Gets/sets the height of the div tag to preserve space for the chart. Set this value to 
+            null to allow the chart to dynamically size.
+            </summary>
+        </member>
+        <member name="M:Mvc.RazorTools.Charts.Morris.RazorSeriesChart.#ctor(System.String,Mvc.RazorTools.Charts.Morris.RazorChartType)">
+            <summary>
+            Creates an instance of a Series Chart with
+            the specified ID.
+            </summary>
+            <param name="id">The Unique ID of this chart.</param>
+            <param name="chartType">The type of chart to create.</param>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorSeriesChart.XKey">
+            <summary>
+            A string containing the name of the attribute that contains date (X) values. Timestamps 
+            are accepted in the form of millisecond timestamps (as returned by Date.getTime() or as 
+            strings in the following formats:
+            •2012
+            •2012 Q1
+            •2012 W1
+            •2012-02
+            •2012-02-24
+            •2012-02-24 15:00
+            •2012-02-24 15:00:00
+            •2012-02-24 15:00:00.000
+            Note: when using millisecond timestamps, it's recommended that you check out the dateFormat option.  
+            Note 2: date/time strings can optionally contain a T between the date and time parts, and/or a Z 
+            suffix, for compatibility with ISO-8601 dates. 
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorSeriesChart.YKeys">
+            <summary>
+            A list of strings containing names of attributes that contain Y values (one for each series of 
+            data to be plotted).
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorSeriesChart.Labels">
+            <summary>
+            A list of strings containing labels for the data series to be plotted (corresponding to the 
+            values in the YKeys option). 
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorSeriesChart.HideHover">
+            <summary>
+            Set to 'False' to always show a hover legend. Set to 'True' or 'Auto' to only show the hover 
+            legend when the mouse cursor is over the chart. Set to 'Always' to never show a hover legend. 
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorSeriesChart.Axes">
+            <summary>
+            Set to false to disable drawing the x and y axes. 
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorSeriesChart.Grid">
+            <summary>
+            Set to false to disable drawing the horizontal grid lines.
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorSeriesChart.GridTextColor">
+            <summary>
+            Set the color of the axis labels (default: #888).
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorSeriesChart.GridTextSize">
+            <summary>
+            Set the point size of the axis labels (default: 12).
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorSeriesChart.GridTextFamily">
+            <summary>
+            Set the font family of the axis labels (default: sans-serif). 
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorSeriesChart.GridTextWeight">
+            <summary>
+            Set the font weight of the axis labels (default: normal).
+            </summary>
+        </member>
+        <member name="M:Mvc.RazorTools.Charts.Morris.RazorLineChart.#ctor(System.String)">
+            <summary>
+            Creates an instance of a Morris Line Chart with
+            the specified ID.
+            </summary>
+            <param name="id">The Unique ID of this chart.</param>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorLineChart.LineColors">
+            <summary>
+            Array containing colors for the series lines/points.
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorLineChart.LineWidth">
+            <summary>
+            Width of the series lines, in pixels.
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorLineChart.PointFillColors">
+            <summary>
+            Colors for the series points. By default uses the same values as LineColors.
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorLineChart.PointSize">
+            <summary>
+            Diameter of the series points, in pixels.
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorLineChart.PointStrokeColors">
+            <summary>
+            Colors for the outlines of the series points. (#ffffff by default).
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorLineChart.Ymax">
+            <summary>
+            Max. bound for Y-values. Alternatively, set this to 'auto' to compute automatically, or 'auto [num]' to 
+            automatically compute and ensure that the max y-value is at least [num]. 
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorLineChart.Ymin">
+            <summary>
+            Min. bound for Y-values. Alternatively, set this to 'auto' to compute automatically, or 'auto [num]' 
+            to automatically compute and ensure that the min y-value is at most [num]. Hint: you can use this 
+            to create graphs with false origins. 
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorLineChart.Smooth">
+            <summary>
+            Gets/sets a value enable or disable line smoothing. 
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorLineChart.ParseTime">
+            <summary>
+            Set to false to skip time/date parsing for X values, instead treating them as an equally-spaced series. 
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorLineChart.PostUnits">
+            <summary>
+            Set to a string value (eg: '%') to add a label suffix all y-labels. 
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorLineChart.PreUnits">
+            <summary>
+            Set to a string value (eg: '$') to add a label prefix all y-labels. 
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorLineChart.DateFormat">
+            <summary>
+            A format string that accepts millisecond timestamps and formats them for display as chart labels.
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorLineChart.XLabels">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorLineChart.XLabelFormat">
+            <summary>
+            A format string that accepts Date objects and formats them for display as x-axis labels. Overrides the 
+            default formatter chosen by the automatic labeler or the xLabels option. 
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorLineChart.YLabelFormat">
+            <summary>
+            A string format that accepts y-values and formats them for display as y-axis labels. 
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorLineChart.Goals">
+            <summary>
+            A list of y-values to draw as horizontal 'goal' lines on the chart. 
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorLineChart.GoalStrokeWidth">
+            <summary>
+            Width, in pixels, of the goal lines. 
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorLineChart.GoalLineColors">
+            <summary>
+            Array of color values to use for the goal line colors. If you list fewer colors here than you 
+            have lines in goals, then the values will be cycled. 
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorLineChart.Events">
+            <summary>
+            A list of x-values to draw as vertical 'event' lines on the chart.
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorLineChart.EventStrokeWidth">
+            <summary>
+            Width, in pixels, of the event lines.
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorLineChart.EventLineColors">
+            <summary>
+            Array of color values to use for the event line colors. If you list fewer colors here than you 
+            have lines in events, then the values will be cycled. 
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorLineChart.ContinuousLine">
+            <summary>
+            When set to false (the default), all null and undefined values in a data series will be ignored and lines 
+            will be drawn spanning them. When set to true, null values will break the line and undefined values will 
+            be spanned. Note: in v0.5.0, this setting will be removed and the behavior will be to break lines at 
+            null values. 
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorLineChart.FillOpactiy">
+            <summary>
+            Change the opacity of the area fill color. Accepts values between 0.0 (for 
+            completely transparent) and 1.0 (for completely opaque). 
+            </summary>
+        </member>
+        <member name="M:Mvc.RazorTools.Charts.Morris.RazorAreaChart.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorAreaChart.BehaveLikeLine">
+            <summary>
+            Gets/sets a value that determines if the items are overlaid on top of each other (true)
+            instead of stacking them (false).
+            </summary>
+        </member>
+        <member name="T:Mvc.RazorTools.Charts.Morris.RazorBarChart">
+            <summary>
+            Create Morris bar charts. 
+            </summary>
+        </member>
+        <member name="M:Mvc.RazorTools.Charts.Morris.RazorBarChart.#ctor(System.String)">
+            <summary>
+            Creates an instance of a Morris Bar Chart with the specified ID.
+            </summary>
+            <param name="id">The Unique ID of this chart.</param>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorBarChart.BarColors">
+            <summary>
+            Array containing colors for the series bars. 
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorBarChart.Stacked">
+            <summary>
+            Set to true to draw bars stacked vertically. 
+            </summary>
+        </member>
+        <member name="T:Mvc.RazorTools.Charts.Morris.RazorDonutChart">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Mvc.RazorTools.Charts.Morris.RazorDonutChart.#ctor(System.String)">
+            <summary>
+            Creates a new instance of a Morris Donut Chart with
+            the specified ID.
+            </summary>
+            <param name="id">The Unique ID of this chart.</param>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorDonutChart.Colors">
+            <summary>
+            An array of strings containing HTML-style hex colors for each of the donut 
+            segments.  Note: if there are fewer colors than segments, the colors will 
+            cycle back to the start of the array when exhausted. 
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorDonutChart.Formatter">
+            <summary>
+            A string format that will translate a y-value into a label for the center of the donut. 
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorDonutChart.BackgroundColor">
+            <summary>
+            Gets/sets the background color of the chart.
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.RazorDonutChart.LabelColor">
+            <summary>
+            Gets/sets the color of the label in the center of the chart.
+            </summary>
+        </member>
+        <member name="T:Mvc.RazorTools.Charts.Morris.HideHoverState">
+            <summary>
+            A list of values that can specify the
+            hover state of the legend for a chart.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.HideHoverState.None">
+            <summary>
+            The hide hover state is not specified.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.HideHoverState.Auto">
+            <summary>
+            Only show the hover legend when the mouse cursor is over the chart.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.HideHoverState.True">
+            <summary>
+            Only show the hover legend when the mouse cursor is over the chart.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.HideHoverState.False">
+            <summary>
+            Always show a hover legend. 
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.HideHoverState.Always">
+            <summary>
+            Never show a hover legend.
+            </summary>
+        </member>
+        <member name="T:Mvc.RazorTools.Charts.Morris.RazorChartType">
+            <summary>
+            This is the base class for all Morris charts.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.RazorChartType.None">
+            <summary>
+            The type of chart is not specified.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.RazorChartType.Area">
+            <summary>
+            An Area Chart with lines, points and shaded area under the lines.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.RazorChartType.Line">
+            <summary>
+            An Line Chart with lines and points.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.RazorChartType.Donut">
+            <summary>
+            A circular graph with slices representing the data.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.RazorChartType.Bar">
+            <summary>
+            A vertical bar chart.
+            </summary>
+        </member>
+        <member name="T:Mvc.RazorTools.Charts.Morris.HtmlExtensions">
+            <summary>
+            Provides a set of extension methods for the System.Web.Mvc.HtmlHelper class. These extension
+            methods are referenced in the razor view using the @Html keyword.
+            </summary>
+        </member>
+        <member name="M:Mvc.RazorTools.Charts.Morris.HtmlExtensions.MorrisChart(System.Web.Mvc.HtmlHelper,Mvc.RazorTools.Charts.Morris.RazorChart)">
+            <summary>
+            Extension method to display a Razor Chart in a view.
+            </summary>
+            <param name="html">An instance of HtmlHelper.</param>
+            <param name="chart">An instance of the chart to display.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Mvc.RazorTools.Charts.Morris.xLabel">
+            <summary>
+            Specifies the x axis labeling interval. By default the interval will be automatically computed. 
+            The following are valid interval strings: 
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.xLabel.Decade">
+            <summary>
+            Specifies the X-Axis label interval will be one decade.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.xLabel.Year">
+            <summary>
+            Specifies the X-Axis label interval will be one year.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.xLabel.Month">
+            <summary>
+            Specifies the X-Axis label interval will be one month.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.xLabel.Day">
+            <summary>
+            Specifies the X-Axis label interval will be one day.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.xLabel.Hour">
+            <summary>
+            Specifies the X-Axis label interval will be an hour.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.xLabel.ThirtyMinute">
+            <summary>
+            Specifies the X-Axis label interval will be 30 minutes.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.xLabel.FifteenMinute">
+            <summary>
+            Specifies the X-Axis label interval will be 15 minutes.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.xLabel.TenMinute">
+            <summary>
+            Specifies the X-Axis label interval will be 10 minutes.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.xLabel.FiveMinute">
+            <summary>
+            Specifies the X-Axis label interval will be 5 minutes.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.xLabel.Minute">
+            <summary>
+            Specifies the X-Axis label interval will be one minute.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.xLabel.ThirtySecond">
+            <summary>
+            Specifies the X-Axis label interval will be 30 seconds.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.xLabel.FifteenSecond">
+            <summary>
+            Specifies the X-Axis label interval will be 15 seconds.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.xLabel.TenSeconds">
+            <summary>
+            Specifies the X-Axis label interval will be 10 seconds.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.xLabel.FiveSecond">
+            <summary>
+            Specifies the X-Axis label interval will be 5 seconds.
+            </summary>
+        </member>
+        <member name="F:Mvc.RazorTools.Charts.Morris.xLabel.Second">
+            <summary>
+            Specifies the X-Axis label interval will be one second.
+            </summary>
+        </member>
+        <member name="P:Mvc.RazorTools.Charts.Morris.xLabel.Value">
+            <summary>
+            Gets/sets the string value expected by the Morris.js library.
+            </summary>
+        </member>
+    </members>
+</doc>

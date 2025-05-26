@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="40105cd5-ef7b-457e-b740-3e2f49d551e6"
+  name="TaskManagerV2"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="22cfa3fa-d3cc-4edc-b6bb-8f91a5733b20"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DTaskManagerV2"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="0fc802e1-5523-43f1-ae3f-ae681fff7e93"
+        LastKnownName="Models"
+        LastKnownLocation="Package1_1527.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="6f9aa545-2b2a-4df8-aee3-6314f60a88cd"
+        LastKnownName="Controllers"
+        LastKnownLocation="Package_1532.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="d89b706e-f5e5-4511-bedd-a8839abe15a6"
+        LastKnownName="ClassLibrary"
+        LastKnownLocation="Package_1544.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

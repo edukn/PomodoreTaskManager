@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="bb2b27d7-b17b-4a21-a9d3-328ebb77e208"
+  name="Mvc"
+  visibility="Private" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <referencesInternal>
+    <reference
+      Id="dd3f4630-30a1-4e5e-aef8-48e65ec051a5"
+      handle="viewcode://./CodeSchema_Namespace?Namespace%3DGoogle.Apis.Auth.OAuth2.Mvc"
+      tag="ViewCode" />
+  </referencesInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="1015b454-08d5-4088-9e16-b2befb088d97"
+        name="FlowMetadata"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false">
+        <referencesInternal>
+          <reference
+            Id="1dca1066-2bbf-461f-8ce7-696f7de0966a"
+            handle="viewcode://./CodeSchema_Class?Assembly%3D&quot;file:%2F%2F%2FC:%2FUsers%2FEduardoKNeto%2FDocuments%2FVisual Studio 2013%2FProjects%2FTaskManagerV2%2Fpackages%2FGoogle.Apis.Auth.Mvc.1.8.1%2Flib%2Fnet40%2FGoogle.Apis.Auth.Mvc4.dll&quot; Namespace%3DGoogle.Apis.Auth.OAuth2.Mvc Type%3DFlowMetadata"
+            tag="ViewCode" />
+        </referencesInternal>
+        <appliedStereotypesInternal>
+          <stereotypeInstance
+            Id="efb0dd53-4977-481f-bd47-fde250a33104"
+            name="class"
+            profile="CSharpProfile">
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="fe6c30d0-00c8-4710-b473-8f4edc1d9515">
+                <propertyInstance
+                  Id="8997dfdf-ea99-4fa0-be32-31d75e938971"
+                  name="ClrAttributes" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="ef2b51bd-5820-4122-9422-2156235ef659">
+                <propertyInstance
+                  Id="bef2a970-2133-4eee-935b-e4641c887da9"
+                  name="IsPartial"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="46854208-68e9-4a21-b33d-857dec79d7eb">
+                <propertyInstance
+                  Id="5d141a9e-f7b0-47e3-8c74-66568d5177df"
+                  name="IsStatic"
+                  value="False" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="4c8c2461-a73f-49e6-87fa-87e32ad6c7b3">
+                <propertyInstance
+                  Id="8a6dac50-f625-413f-a7de-6b913f3bf13f"
+                  name="IsUnsafe"
+                  value="false" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances
+                Id="6cd1a003-6bdf-41ee-9770-513621da65bb">
+                <propertyInstance
+                  Id="620bb475-3315-4c91-8006-bf70c9fec0d0"
+                  name="PackageVisibility"
+                  value="internal" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="0193a5c6-265d-4cc2-8390-6c3a6d531b16"
+        LastKnownName="Controllers"
+        LastKnownLocation="Package8_1535.uml" />
+    </packageHasNamedElement>
+  </packagedElements>
+</package>
